@@ -1,0 +1,14 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: github-config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Andrey528/ClothingStoreSpringProjectConfigs.git
+          default-label: main
+          search-paths: "{application}"

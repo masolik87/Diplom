@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: eureka-server
+  config:
+    import: configserver:http://localhost:8084
+  profiles:
+    active: default
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
